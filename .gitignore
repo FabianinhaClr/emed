@@ -1,0 +1,14 @@
+# Ignorar ambiente virtual
+.venv/
+
+# Ignorar arquivos compilados
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignorar arquivos específicos do sistema
+.DS_Store
+.env
+
+# Ignorar arquivos de configuração do editor
+.vscode/
