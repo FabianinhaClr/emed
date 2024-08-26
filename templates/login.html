@@ -1,0 +1,29 @@
+{% extends 'navegacao.html' %}
+{%block conteudo%}
+ {% set mensagens = get_flashed_messages() %}
+    {% if mensagens %}
+    <div class="alert alert-danger">
+        {% for msg in mensagens %}
+        {{ msg }}
+        {% endfor %}
+    </div>
+    {% endif %}
+
+<form action="/autenticar" method="post">
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <label for="inputLogin" class="form-label">Login</label>
+            <input type="text" name="usuario" id="inputLogin" class="form-control" aria-describedby="Login">
+        </div>
+        <div class="col-auto">
+            <label for="inputSenha" class="form-label">Senha
+
+            </label>
+            <input type="password" name="senha" id="inputSenha" class="form-control" aria-describedby="Senha">
+        </div>
+        <div class="col-auto">
+        <button type="submit" class="btn btn-success">Entrar</button>
+        </div>
+    </div>
+</form>
+{% endblock %}
